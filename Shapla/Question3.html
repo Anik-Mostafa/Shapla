@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <h1>Question 3</h1>
+      <br><br>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  <label for="lname">Number of people infected:</label><br>
+  <input type="number" id="num" name="num" value=""><br><br>
+  <input type="button" onclick='myFunction()' value="Submit">
+
+</form>
+<h2 id="value"></h2>
+
+
+<script>
+  function myFunction(){
+    var x = document.getElementById("num").value;
+    x=parseInt(x);
+    var value;
+
+    if(x>=100){
+    value="60 days home quarantine + 2 months Netflix subscription credit";
+  }
+  else if(x>=50){
+    value="40 days home quarantine + 1 months Netflix subscription credit";
+  }
+  else if(x>=10){
+    value="20 days home quarantine + 1 months Netflix subscription credit";
+  }
+  else if(x>=3){
+    value="14 days home quarantine + NO(zero) Netflix subscription credit";
+  }
+
+    document.getElementById("value").innerHTML=value;
+
+
+  }
+</script>
+  </body>
+</html>
